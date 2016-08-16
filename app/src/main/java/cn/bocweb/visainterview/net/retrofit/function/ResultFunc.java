@@ -2,6 +2,7 @@ package cn.bocweb.visainterview.net.retrofit.function;
 
 import cn.bocweb.visainterview.net.retrofit.exception.ApiException;
 import cn.bocweb.visainterview.net.retrofit.response.ResultResponse;
+import cn.bocweb.visainterview.utils.LogUtils;
 import rx.functions.Func1;
 
 /**
@@ -11,11 +12,11 @@ import rx.functions.Func1;
 public class ResultFunc<T> implements Func1<ResultResponse<T>, T> {
     @Override
     public T call(ResultResponse<T> tResultResponse) {
-        if(tResultResponse == null){
+        /*if(tResultResponse == null){
             throw new ApiException();
         }else if (tResultResponse.getError_code() != 0) {
             throw new ApiException(tResultResponse.getError_code(),tResultResponse.getReason());
-        }
+        }*/
         return tResultResponse.getResult();
     }
 }

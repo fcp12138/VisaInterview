@@ -4,5 +4,24 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="colortip">#297CE4</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#3C8BE8</color>
+    <color name="bg_bule">#1953A5</color>
+    <color name="bg_gray">#F4F5F7</color>
+    <color name="bg_view">#D7D7D7</color>
+    <color name="text_color">#666666</color>
+    <color name="ft_tvcolor">#999999</color>
+    <color name="bg_progress">#242426</color>
+    <color name="view_color">#F3F4F6</color>
+    <color name="message_hint_tv">#D23733</color>
+    <color name="blank">#333333</color>
+    <color name="green">#00B12F</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="actionsheet_blue">#037BFF</color>
 
+    <!--主页-->
+    <color name="main_bottom_bar_select_color">#237854</color>
+    <color name="main_bottom_bar_select_no_color">#898989</color>
 </resources>

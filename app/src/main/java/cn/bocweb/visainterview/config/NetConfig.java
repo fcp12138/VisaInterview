@@ -7,9 +7,9 @@ package cn.bocweb.visainterview.config;
 public class NetConfig {
 
     /**
-     * 网络地址
+     * 网络地址(根据配置界面更改)
      */
-    public static final String BASE_URL = "http://122.224.166.154:8090/TageFund.asmx/";
+    public static String BASE_URL = "http://122.224.166.154:8090/TageFund.asmx/";
 
     /**
      * 网络缓存文件名,getExternalCacheDir()路径下

@@ -1,7 +1,7 @@
 package cn.bocweb.visainterview.net.retrofit.response;
 
 /**
- * Object
+ * Object(本应用中未用到)
  * Created by fcp on 2016/8/11.
  */
 public class ResultResponse<T> extends BaseResponse {

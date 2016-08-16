@@ -6,5 +6,6 @@ package cn.bocweb.visainterview.contract;
  */
 public interface BaseView {
 
+    //void setPresenter(T mPresenter);
 
 }

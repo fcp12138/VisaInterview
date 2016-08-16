@@ -1,7 +1,7 @@
 package cn.bocweb.visainterview.net.retrofit.response;
 
 /**
- * 基本返参
+ * 基本返参(本应用中未用到)
  * Created by fcp on 2016/5/3.
  */
 public abstract class BaseResponse {
