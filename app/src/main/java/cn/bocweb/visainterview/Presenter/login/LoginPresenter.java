@@ -74,10 +74,13 @@ public class LoginPresenter implements LoginContract.Presenter {
                 public void onNext(LoginBean loginBean) {
                     if (loginBean.getIsMatch().equals("否")) {
                         mContractView.showMsg("账号或用户名错误");
+                        mContractView.hideDialog();
                     } else if (loginBean.getIsUnable().equals("设备未授权")) {
                         mContractView.showMsg("该设备尚未进行授权!");
+                        mContractView.hideDialog();
                     } else if (loginBean.getIsUnable().equals("账号被禁用")) {
                         mContractView.showMsg("该账号已被禁止使用!");
+                        mContractView.hideDialog();
                     } else {
                         mContractView.getLoginResult(loginBean);
                     }

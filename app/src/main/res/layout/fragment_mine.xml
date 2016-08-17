@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:divider="@drawable/shape_default_layout_divider"
+    android:showDividers="middle|end"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:padding="10dp"
+        android:text="个人信息"
+        android:background="@drawable/selector_default_layout"
+        android:drawableRight="@mipmap/enter"
+        android:drawableEnd="@mipmap/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:padding="10dp"
+        android:text="设置"
+        android:background="@drawable/selector_default_layout"
+        android:drawableRight="@mipmap/enter"
+        android:drawableEnd="@mipmap/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:padding="10dp"
+        android:text="推荐给好友"
+        android:background="@drawable/selector_default_layout"
+        android:drawableRight="@mipmap/enter"
+        android:drawableEnd="@mipmap/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:padding="10dp"
+        android:text="关于我们"
+        android:background="@drawable/selector_default_layout"
+        android:drawableRight="@mipmap/enter"
+        android:drawableEnd="@mipmap/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public abstract class ToolbarActivity extends SystemBarActivity {
      * 默认左右
      */
     private TextView leftText,rightText;
+    private ImageView imageView;
     protected LayoutInflater layoutInflater ;
     /**
      * 高度
@@ -62,6 +64,7 @@ public abstract class ToolbarActivity extends SystemBarActivity {
         titleText = (TextView) toolbarLayoutView.findViewById(R.id.base_activity_toolbar_default_center);
         leftText = (TextView) toolbarLayoutView.findViewById(R.id.base_activity_toolbar_default_left);
         rightText = (TextView) toolbarLayoutView.findViewById(R.id.base_activity_toolbar_default_right);
+        imageView = (ImageView) toolbarLayoutView.findViewById(R.id.base_activity_toolbar_default_right_img);
         //默认
         leftText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,5 +161,9 @@ public abstract class ToolbarActivity extends SystemBarActivity {
 
     protected TextView getRightBtn() {
         return rightText;
+    }
+
+    public ImageView getImageView() {
+        return imageView;
     }
 }

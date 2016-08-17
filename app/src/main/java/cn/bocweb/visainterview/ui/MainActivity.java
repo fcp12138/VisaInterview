@@ -3,17 +3,16 @@ package cn.bocweb.visainterview.ui;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.bocweb.visainterview.R;
 import cn.bocweb.visainterview.base.VIActivity;
-import cn.bocweb.visainterview.ui.login.fragment.ApplicationFragment;
-import cn.bocweb.visainterview.ui.login.fragment.ApproveFragment;
-import cn.bocweb.visainterview.ui.login.fragment.MessageFragment;
-import cn.bocweb.visainterview.ui.login.fragment.MineFragment;
+import cn.bocweb.visainterview.ui.fragment.ApplicationFragment;
+import cn.bocweb.visainterview.ui.fragment.ApproveFragment;
+import cn.bocweb.visainterview.ui.fragment.MessageFragment;
+import cn.bocweb.visainterview.ui.fragment.MineFragment;
 import cn.bocweb.visainterview.view.MainBottomBar;
 
 public class MainActivity extends VIActivity {
@@ -69,7 +68,6 @@ public class MainActivity extends VIActivity {
         hideAllFragment(transaction);
         switch (index){
             case 0://消息界面
-                getTitleText().setText("消息");
                 if (mMessageFragment == null) {
                     // 如果clientFragment为空，则创建一个并添加到界面上
                     mMessageFragment = new MessageFragment();
@@ -81,9 +79,9 @@ public class MainActivity extends VIActivity {
                     // 如果clientFragment不为空，则直接将它显示出来
                     transaction.show(mMessageFragment);
                 }
+                mMessageFragment.changeToolbar(this,getLeftBtn(),getTitleText(),getRightBtn(),getImageView());
                 break;
             case 1:
-                getTitleText().setText("审批");
                 if (mApproveFragment == null) {
                     // 如果clientFragment为空，则创建一个并添加到界面上
                     mApproveFragment = new ApproveFragment();
@@ -92,9 +90,9 @@ public class MainActivity extends VIActivity {
                     // 如果clientFragment不为空，则直接将它显示出来
                     transaction.show(mApproveFragment);
                 }
+                mApproveFragment.changeToolbar(this,getLeftBtn(),getTitleText(),getRightBtn(),getImageView());
                 break;
             case 2:
-                getTitleText().setText("应用");
                 if (mApplicationFragment == null) {
                     // 如果clientFragment为空，则创建一个并添加到界面上
                     mApplicationFragment = new ApplicationFragment();
@@ -103,9 +101,9 @@ public class MainActivity extends VIActivity {
                     // 如果clientFragment不为空，则直接将它显示出来
                     transaction.show(mApplicationFragment);
                 }
+                mApplicationFragment.changeToolbar(this,getLeftBtn(),getTitleText(),getRightBtn(),getImageView());
                 break;
             case 3:
-                getTitleText().setText("我的");
                 if (mMineFragment == null) {
                     // 如果clientFragment为空，则创建一个并添加到界面上
                     mMineFragment = new MineFragment();
@@ -114,6 +112,7 @@ public class MainActivity extends VIActivity {
                     // 如果clientFragment不为空，则直接将它显示出来
                     transaction.show(mMineFragment);
                 }
+                mMineFragment.changeToolbar(this,getLeftBtn(),getTitleText(),getRightBtn(),getImageView());
                 break;
         }
         transaction.commit();
